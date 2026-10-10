@@ -13,8 +13,9 @@ jobs:
         with:
           gradle-version: 8.1.1
       - run: gradle build --no-daemon
+        working-directory: NOMBRE-DE-LA-CARPETA
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: witherbloom-jar
-          path: build/libs/*.jar
+          path: NOMBRE-DE-LA-CARPETA/build/libs/*.jar
